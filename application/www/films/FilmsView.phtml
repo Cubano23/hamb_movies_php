@@ -1,0 +1,20 @@
+
+
+<form class="form-group">
+    <input type="text" class="form-control" id="searchTerm" placeholder="Veuillez tapez un film...">
+</form>
+<div id="gallery"></div>  
+<div id="title-film"></div>
+
+<script>
+  
+performSearch("academy")
+$("#searchTerm").keyup(function() {
+    if($("#searchTerm").val() == ""){
+        performSearch("academy");
+    }else{
+        performSearch($("#searchTerm").val());    
+    }
+});
+
+</script>
